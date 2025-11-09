@@ -12,8 +12,6 @@ Incluye tres componentes:
 ```bash
 docker compose build
 
-```bash
 docker compose up -d vuln-store safe-store
 
-```bash
 docker compose run --rm --service-ports cli
