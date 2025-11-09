@@ -1,0 +1,36 @@
+version: "3.8"
+services:
+  vuln-store:
+    build: .
+    image: integer-demo:latest
+    container_name: integer-vuln-store
+    command: ["node", "vuln-tech-store.js"]
+    ports:
+      - "3200:3200"
+    environment:
+      - NODE_ENV=development
+    restart: unless-stopped
+
+  safe-store:
+    build: .
+    image: integer-demo:latest
+    container_name: integer-safe-store
+    command: ["node", "safe-tech-store.js"]
+    ports:
+      - "3201:3201"
+    environment:
+      - NODE_ENV=development
+    restart: unless-stopped
+
+  cli:
+    build: .
+    image: integer-demo:latest
+    container_name: integer-cli
+    command: ["node", "exploit-tech-cli.js"]
+    stdin_open: true      
+    tty: true
+    depends_on:
+      - vuln-store
+      - safe-store
+    # no se publican los puertos del CLI; se ejecutará mediante `docker compose run`
+    restart: "no"
