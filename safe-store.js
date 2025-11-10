@@ -9,7 +9,7 @@ app.use(express.json());
 const productos = {
   "MACBOOK": { codigo: "MACBOOK", nombre: "MacBook Pro 16\"", precio: 300000n, stock: 5n },
   "IMAC":    { codigo: "IMAC",    nombre: "iMac 27\"", precio: 250000n, stock: 5n },
-  "GPU":     { codigo: "GPU",     nombre: "GPU High-End", precio: 500000n, stock: 5n },
+  "IPHONE":     { codigo: "IPHONE",     nombre: "iPhone 12", precio: 80000n, stock: 5n },
 };
 
 const MAX_CANTIDAD = 10_000_000n;

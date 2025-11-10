@@ -1,5 +1,5 @@
 
-Este repositorio contiene una demostración que muestra las vulnerabilidades **Integer Overflow** y **Integer Underflow** usando una **tienda tecnológica** (productos como MacBook, iMac, GPU).  
+Este repositorio contiene una demostración que muestra las vulnerabilidades **Integer Overflow** y **Integer Underflow** usando una **tienda tecnológica** (productos como MacBook, iMac, iphone).  
 Incluye tres componentes:
 
 - **Tienda vulnerable** (`vuln-store.js`) — calcula totales con aritmética `uint32` simulada → **vulnerable a overflow**. También tiene endpoint de devolución vulnerable → **underflow**.

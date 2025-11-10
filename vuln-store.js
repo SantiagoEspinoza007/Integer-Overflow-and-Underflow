@@ -13,7 +13,7 @@ app.use(express.json());
 const productos = {
   "MACBOOK": { codigo: "MACBOOK", nombre: "MacBook Pro 16\"", precio: 300000, stock: 5 },
   "IMAC":    { codigo: "IMAC",    nombre: "iMac 27\"", precio: 250000, stock: 5 },
-  "GPU":     { codigo: "GPU",     nombre: "GPU High-End", precio: 500000, stock: 5 },
+  "IPHONE":     { codigo: "IPHONE",     nombre: "iPhone 12", precio: 80000, stock: 5 },
 };
 
 app.get("/", (req, res) => res.json({ info: "Tienda vulnerable (puerto fijo 3200). Endpoints: /productos, /comprar, /devolver" }));
